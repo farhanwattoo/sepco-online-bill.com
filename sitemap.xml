@@ -41,6 +41,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sepco-online-bill.com/sepco-bill-check-by-cnic/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sepco-online-bill.com/sepco-bill-check-by-customer-id/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sepco-online-bill.com/sepco-bill-check-by-meter-number/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sepco-online-bill.com/sepco-bill-check-by-name/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sepco-online-bill.com/sepco-bill-check-by-reference-number/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sepco-online-bill.com/sepco-bill-estimate-calculator-guide/</loc>
     <lastmod>2026-07-08</lastmod>
     <priority>0.8</priority>
@@ -76,6 +101,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sepco-online-bill.com/sepco-duplicate-bill/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sepco-online-bill.com/sepco-duplicate-bill-guide/</loc>
     <lastmod>2026-07-08</lastmod>
     <priority>0.8</priority>
@@ -92,6 +122,11 @@
   </url>
   <url>
     <loc>https://sepco-online-bill.com/sepco-peak-hour-charges-guide/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sepco-online-bill.com/sepco-reference-number-format/</loc>
     <lastmod>2026-07-08</lastmod>
     <priority>0.8</priority>
   </url>

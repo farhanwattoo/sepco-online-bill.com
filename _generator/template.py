@@ -166,6 +166,8 @@ def article_schema(title, desc, path):
                 "@type": "Article",
                 "headline": title,
                 "description": desc,
+                "image": SITE + "/og-image.png",
+                "datePublished": UPDATED_ISO,
                 "dateModified": UPDATED_ISO,
                 "inLanguage": "en",
                 "mainEntityOfPage": SITE + path,

@@ -105,6 +105,8 @@ def home_page():
               "sepco-fuel-price-adjustment-fpa", "pay-sepco-bill-jazzcash-easypaisa", "sepco-helpline-complaint-numbers",
               "sepco-new-connection-guide", "how-to-reduce-sepco-electricity-bill", "apna-meter-apni-reading-sepco",
               "sepco-load-shedding-schedule-check"]
+    methods = ["sepco-bill-check-by-reference-number", "sepco-bill-check-by-customer-id",
+               "sepco-bill-check-by-cnic", "sepco-bill-check-by-name", "sepco-bill-check-by-meter-number"]
     guides = ["sepco-online-bill-check", "how-to-check-sepco-bill-online", "sepco-duplicate-bill-guide",
               "sepco-reference-number-guide", "how-to-read-a-sepco-electricity-bill", "sepco-bill-charges-explained",
               "sepco-bill-payment-methods-guide", "sepco-due-date-and-late-payment-guide", "common-sepco-bill-check-errors",
@@ -152,6 +154,11 @@ def home_page():
           </tbody>
         </table></div>
         <p>Full slab-by-slab tables, fixed charges and surcharges: <a href="/sepco-tariff-rates-2026/">SEPCO tariff rates 2026</a>. Why crossing 200 units nearly triples the bill: <a href="/sepco-protected-vs-unprotected-tariff/">the 200-unit rule</a>.</p>
+      </section>
+      <section class="section">
+        <h2>Ways to check your bill</h2>
+        <p>Only the 14-digit reference number works on the official portal — these guides cover what people try to search by, what actually works, and how to convert what you have into what you need.</p>
+        <div class="cards">{cards(methods)}</div>
       </section>
       <section class="section">
         <h2>Latest guides</h2>

@@ -12,11 +12,15 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
         }
       ]
     },
     {
-      "source": "/(styles.css|script.js|favicon.svg)",
+      "source": "/(styles.css|script.js|favicon.svg|og-image.png|apple-touch-icon.png)",
       "headers": [
         {
           "key": "Cache-Control",

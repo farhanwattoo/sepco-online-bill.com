@@ -270,7 +270,7 @@ PAGES_A = {
         ("Do I ever actually need the consumer ID?", "Occasionally at the subdivision office for account-level work such as name transfer, load change, or tariff category corrections."),
         ("Are these the same as the meter number?", "No — the meter number is a third identifier, stamped on the physical meter. It matters for meter replacement and theft complaints, not for bill checking."),
     ],
-    related=["sepco-reference-number-guide", "where-to-find-sepco-reference-number", "common-sepco-bill-check-errors", "sepco-online-bill-check", "sepco-helpline-complaint-numbers", "how-to-read-a-sepco-electricity-bill"],
+    related=["sepco-reference-number-guide", "where-to-find-sepco-reference-number", "sepco-bill-check-by-customer-id", "sepco-bill-check-by-meter-number", "common-sepco-bill-check-errors", "sepco-online-bill-check"],
 ),
 
 "how-to-read-a-sepco-electricity-bill": dict(
@@ -632,7 +632,7 @@ PAGES_A = {
         ("Why do third-party bill sites show my bill when the official one is down?", "They cache previously fetched copies. That cached copy may be stale — don't rely on it for the current amount or due date."),
         ("Is it safe to enter my reference number on any site?", "The number alone can't be used to change your account, but fake sites use entered numbers for ad targeting and scams. Stick to the official portal."),
     ],
-    related=["sepco-consumer-id-vs-reference-number", "where-to-find-sepco-reference-number", "sepco-online-bill-check", "apna-meter-apni-reading-sepco", "sepco-helpline-complaint-numbers", "sepco-fuel-price-adjustment-fpa"],
+    related=["sepco-consumer-id-vs-reference-number", "where-to-find-sepco-reference-number", "sepco-bill-check-by-name", "sepco-bill-check-by-cnic", "apna-meter-apni-reading-sepco", "sepco-helpline-complaint-numbers"],
 ),
 
 "faq-about-sepco-online-bill": dict(

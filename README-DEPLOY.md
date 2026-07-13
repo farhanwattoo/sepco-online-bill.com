@@ -1,41 +1,49 @@
-﻿# Deploy sepco-online-bill.com on Vercel
+# sepco-online-bill.com
 
-This folder is designed to work as its own standalone static website.
+Static site for SEPCO (Sukkur Electric Power Company) bill guides, with a
+browser-side bill estimator built on the FY 2025-26 NEPRA tariff.
 
-## Recommended Vercel settings
+## Deploy on Vercel
 
 - Framework Preset: Other
-- Root Directory: this folder itself
+- Root Directory: this folder
 - Build Command: leave empty
 - Output Directory: leave empty
 
-## Important
+`vercel.json` enables `cleanUrls` and `trailingSlash`, so every page is served
+at its canonical URL (e.g. `/sepco-tariff-rates-2026/`). `404.html` is served
+automatically for unknown paths. `.vercelignore` keeps the generator and repo
+docs out of the deployment.
 
-Deploy this folder as its own repository root or set this folder as the Vercel project root.
+## Structure
 
-Do not deploy the parent workspace if you want https://sepco-online-bill.com/ to open this site directly.
+- `index.html` — homepage (includes the bill estimator)
+- `<slug>/index.html` — one folder per article/guide (30 articles + 5 legal pages)
+- `styles.css` — single mobile-first stylesheet, no external assets
+- `script.js` — slab-based bill estimator (runs entirely client-side)
+- `sitemap.xml`, `robots.txt`, `favicon.svg`, `404.html`
 
-## Main files
+## Editing pages
 
-- index.html
-- styles.css
-- script.js
-- robots.txt
-- sitemap.xml
-- vercel.json
+Pages are generated from `_generator/` (plain Python, no dependencies):
 
-## Routing
+- `template.py` — HTML template, nav/footer, schema markup, card metadata
+- `content_a.py` — the 20 core bill guides
+- `content_b.py` — the 10 newer articles
+- `build.py` — page content for home/legal pages + writes all HTML and sitemap.xml
 
-This site uses folder-based pages such as:
+To change content, edit the relevant file and run:
 
-- /about-us/
-- /contact-us/
+```
+python3 _generator/build.py
+```
 
-The homepage is served from /.
+Commit both the generator change and the regenerated HTML.
 
-Supporting content pages also use folder routes, for example:
+## Keeping rates current
 
-- /privacy-policy/
-- /terms-and-conditions/
-
-If you import this folder alone into Vercel, the homepage should resolve from index.html and subpages should resolve from their own index.html files inside each page folder.
+Tariff figures (slab rates in `script.js` and the tariff/calculator articles)
+follow the NEPRA-notified uniform tariff. NEPRA rebases each July and adjusts
+quarterly — update `script.js` TARIFF/FIXED_CHARGES plus the tables in
+`content_b.py` (`sepco-tariff-rates-2026`) when new determinations land, and
+bump the `UPDATED_*` constants in `template.py`.

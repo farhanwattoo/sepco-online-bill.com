@@ -39,6 +39,11 @@ SLUG_META = {
     "how-to-reduce-sepco-electricity-bill": ("Reduce Your SEPCO Bill", "Practical ways to cut units and stay in a cheaper slab."),
     "apna-meter-apni-reading-sepco": ("Apna Meter Apni Reading", "Submit your own meter reading with PITC's AMAR app."),
     "sepco-load-shedding-schedule-check": ("Load Shedding Schedule", "How to find the outage schedule for your SEPCO feeder."),
+    "sepco-bill-check-by-reference-number": ("Check Bill by Reference Number", "The standard method explained: format, entry tips and troubleshooting."),
+    "sepco-bill-check-by-customer-id": ("Check Bill by Customer ID", "Why the 10-digit ID doesn't work online and how to convert it."),
+    "sepco-bill-check-by-cnic": ("Check Bill by CNIC?", "What your CNIC can and can't do in SEPCO's billing system."),
+    "sepco-bill-check-by-name": ("Check Bill by Name?", "Why name search isn't offered and the fastest alternatives."),
+    "sepco-bill-check-by-meter-number": ("Check Bill by Meter Number", "Meter number vs reference number, and how to trace one from the other."),
     # legal
     "about-us": ("About Us", "Who runs this site and how the information is checked."),
     "contact-us": ("Contact Us", "Report a correction or send feedback."),
@@ -233,13 +238,18 @@ def render(path, title, desc, main_html, schema, og_type="article", scripts=""):
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="{SITE}{path}">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#0f8a83">
   <meta property="og:type" content="{og_type}">
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(desc)}">
   <meta property="og:url" content="{SITE}{path}">
   <meta property="og:site_name" content="{SITE_NAME}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="{SITE}/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{SITE}/og-image.png">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
 </head>

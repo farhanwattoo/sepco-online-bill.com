@@ -4,6 +4,7 @@ from template import (render, article_page, legal_page, related_cards, faq_html,
                       UPDATED_ISO, SITE, esc)
 from content_a import PAGES_A
 from content_b import PAGES_B
+from content_c import PAGES_C
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -200,6 +201,7 @@ def write(path, content):
 ALL_ARTICLES = {}
 ALL_ARTICLES.update(PAGES_A)
 ALL_ARTICLES.update(PAGES_B)
+ALL_ARTICLES.update(PAGES_C)
 
 for slug, page in ALL_ARTICLES.items():
     write(f"{slug}/index.html", article_page(slug, page))

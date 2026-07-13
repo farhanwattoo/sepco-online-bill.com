@@ -5,15 +5,36 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/(styles.css|script.js|favicon.svg)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/sepco-duplicate-bill/",
+      "destination": "/sepco-duplicate-bill-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/sepco-reference-number-format/",
+      "destination": "/sepco-reference-number-guide/",
+      "permanent": true
     }
   ]
 }
